@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoList } from "./todoList";
-import { TodoItem } from "./todoItem";
+import { TodoList } from "./surveyList";
+import { SurveyItems } from "./surveyItems";
 
 @Component({
   selector: 'app-create-survey',
@@ -12,9 +12,9 @@ import { TodoItem } from "./todoItem";
 export class CreateSurveyComponent implements OnInit {
 
   private list = new TodoList("Bob", [
-    new TodoItem("Mothly Incomes"," ", "4", true),
-    new TodoItem("Mothly Expenditures"," ","5"),
-    new TodoItem("Collect tickets", "","6"),
+    new SurveyItems("Mothly Incomes","Survey to understand the typical statistics of mothly income in a given household", "4", true),
+    new SurveyItems("Mothly Expenditures","Survey to understand the typical statistics of mothly expenditures in a given household","5"),
+    new SurveyItems("Health Survey", "Survey to understand the typical health conditions of people living in a given society","6"),
   ]);
 
   IsForUpdate: boolean = false;  
@@ -26,7 +26,7 @@ export class CreateSurveyComponent implements OnInit {
     return this.list.user;
   }  
 
-  get getItems(): TodoItem[] {    
+  get getItems(): SurveyItems[] {    
     return this.list.items.filter( item =>  this.showComplete || !item.complete);
   }
 

@@ -16,14 +16,7 @@
           <input class="form-control" [(ngModel)]="model.questions" placeholder="Enter number of questions here" #surveyQues/>
       </div>
 
-      <!--
-      <div class="col-auto">
-        <button class="btn btn-primary" (click)="addNewItem(todoText.value, todoDescription.value, todoDate.value)">
-        Add
-        </button>
-      </div>
-      -->
-
+    
    
  </div>
 
@@ -62,18 +55,12 @@
         <td class="text-center">
           <button class="btn btn-primary btn-sm" (click)="editItem(i+1, item.task, item.description, item.questions)" ><i class="fas fa-pencil-alt"></i>
           </button>
-          <!--
-          <a href="#" class="btn btn-primary btn-sm">
-          <i class="fas fa-pencil-alt"></i></a>
-          -->
+         
       </td>
       <td class="text-center">
         <button class="btn btn-danger btn-sm" (click) = "deleteItem(i+1)"><i class="fas fa-trash-alt"></i>
           </button>
-        <!--
-          <a href="#" class="btn btn-danger btn-sm">
-          <i class="fas fa-trash-alt"></i></a>
-        -->
+
           
       </td>
        

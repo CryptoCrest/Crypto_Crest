@@ -1,19 +1,19 @@
-import { TodoItem } from "./todoItem";
+import { SurveyItems } from "./surveyItems";
 
 
 export class TodoList {
 
-    constructor(public user: string, private todoItems: TodoItem[] = []) {
+    constructor(public user: string, private todoItems: SurveyItems[] = []) {
         // no statements required
     }
 
-    get items(): TodoItem[] {
+    get items(): SurveyItems[] {
         return this.todoItems;
         
     }
 
     addItem(task: string, description: string, questions: string) {
-        this.todoItems.push(new TodoItem(task,description,questions));
+        this.todoItems.push(new SurveyItems(task,description,questions));
     }
 
     delete(i: number){
@@ -22,7 +22,7 @@ export class TodoList {
 
     update( i: number, task: string, description: string, questions: string)
     {
-        this.todoItems.splice(i,1,new TodoItem(task, description, questions))
+        this.todoItems.splice(i,1,new SurveyItems(task, description, questions))
     }
 
     
