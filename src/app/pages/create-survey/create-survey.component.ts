@@ -33,13 +33,13 @@ export class CreateSurveyComponent implements OnInit {
   get itemCount(): number {
     return this.getItems.length;
   }
-
+  //function to add new survey
   addNewItem(newItem: string, newDes: string, questions: string){
     if(newItem != ""){
       this.list.addItem(newItem, newDes, questions);
     }
   }
-
+  //function to edit survey info
   myValue: any;
   editItem(i: number, newItem: string, newDes: string, questions: string){
     this.IsForUpdate = true;
@@ -50,12 +50,13 @@ export class CreateSurveyComponent implements OnInit {
     this.myValue = i
 
   }
+  //function to update survey info
   updateItem(newItem: string, newDes: string, questions: string){
     this.list.update(this.myValue, newItem, newDes, questions)
     this.IsForUpdate = false;
 
   }
-
+  //function to delete survey info
   deleteItem(i: number){
     this.list.delete(i)
   }
