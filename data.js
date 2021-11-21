@@ -1,6 +1,6 @@
 module.exports = function () {
     return {
-        "survey": [
+        "survey-list": [
             {
                 id: 1,
                 surveyName: "Crypto Information",
