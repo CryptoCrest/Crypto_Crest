@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export class Survey{
     constructor(
         public _id?:number,
@@ -7,6 +6,4 @@ export class Survey{
         public numberOfQuestions?: number
     ){}
 }
-=======
-/*test comment*/
->>>>>>> d06ab7f7939bc5e96120966ed117466e78e63294
+
