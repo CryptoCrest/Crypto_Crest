@@ -1,4 +1,5 @@
-export class TodoItem{
+//Constructor for survey items
+export class SurveyItems{
 
     constructor(taskVal: string, descriptionVal: string, quesVal: string, completeVal: boolean = false){
         this.task = taskVal;
